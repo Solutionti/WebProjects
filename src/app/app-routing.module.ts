@@ -5,7 +5,7 @@ import { PacientesComponent } from './admisiones/pacientes/pacientes.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: IniciarsesionComponent,  
   },
   {
