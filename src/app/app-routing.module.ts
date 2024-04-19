@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IniciarsesionComponent } from './seguridad/iniciarsesion/iniciarsesion.component';
-import { PacientesComponent } from './admisiones/pacientes/pacientes.component';
+import { UsuariosComponent } from './seguridad/usuarios/usuarios.component';
 
 const routes: Routes = [
   {
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: IniciarsesionComponent,  
   },
   {
-    path: 'pacientes',
-    component: PacientesComponent,  
+    path: 'usuarios',
+    component: UsuariosComponent,  
   },
 ];
 
