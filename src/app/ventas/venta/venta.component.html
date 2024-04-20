@@ -1,0 +1,253 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  * -->
+<!-- * * * * * * * * * * * JERSON GALVEZ ENSUNCHO * * * * * * * * * * * -->
+<!-- ******* * * * * * * * PROYECTO INVENTSOFT * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
+<div class="min-height-300 bg-default position-absolute w-100"></div>
+<nav class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
+  <div class="container-fluid">
+  <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
+  InventSoft<small  style="color: yellow;">Co</small><small style="color: blue;">lom</small><small style="color: red;">bia</small>
+  </a>
+  <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon mt-2">
+  <span class="navbar-toggler-bar bar1"></span>
+  <span class="navbar-toggler-bar bar2"></span>
+  <span class="navbar-toggler-bar bar3"></span>
+  </span>
+  </button>
+  <div class="collapse navbar-collapse" id="navigation">
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <a class="nav-link me-2" routerLink="/usuarios">
+        <i class="fa fa-cog opacity-6 text-dark me-1"></i>
+        Seguridad
+      </a>
+    </li>
+    <li class="nav-item">
+    <a
+      class="nav-link d-flex align-items-center me-2 active"
+      routerLink="/inicio"
+    >
+    <i class="fa fa-home opacity-6 text-dark me-1"></i>
+      Inicio
+    </a>
+    </li>
+  <li class="nav-item">
+  <a class="nav-link me-2" routerLink="/inventarios">
+  <i class="fas fa-truck opacity-6 text-dark me-1"></i>
+    Inventarios
+  </a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link me-2" routerLink="/venta">
+  <i class="fas fa-shopping-cart opacity-6 text-dark me-1"></i>
+    Ventas
+  </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link me-2" routerLink="/pedidos">
+    <i class="fas fa-motorcycle opacity-6 text-dark me-1"></i>
+      Pedidos
+    </a>
+ </li>
+ <li class="nav-item">
+  <a class="nav-link me-2" routerLink="/compras">
+  <i class="fas fa-chart-line opacity-6 text-dark me-1"></i>
+    Compras
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link me-2" routerLink="/proveedores">
+  <i class="fas fa-users opacity-6 text-dark me-1"></i>
+    Proveedores
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link me-2" routerLink="/reportes">
+  <i class="fas fa-chart-pie opacity-6 text-dark me-1"></i>
+    reportes
+  </a>
+</li>
+  </ul>
+  <ul class="navbar-nav d-lg-block d-none">
+    <li class="nav-item">
+      <a class="nav-link me-2" routerLink="/">
+        Cerrar Sesion
+      <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+      </a>
+      </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+  <main class="main-content position-relative border-radius-lg">
+    <div class="container-fluid py-6">
+      <div class="row ">
+        <div class="card">
+         <br>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 " href="javascript:;">InventSoft</a></li>
+                    <li class="breadcrumb-item text-sm  active" aria-current="page">Venta</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card card-pricing">
+                    <div
+                      class="card-header bg-gradient-dark text-center pt-4 pb-5 position-relative"
+                    >
+                      <div class="z-index-1 position-relative">
+                        <h6 class="text-white">TOTAL VENTA </h6> 
+                        <h2 class="text-white mt-2 mb-0" id="ventaa">
+                          <small id="compracero" class="text-white">$0 </small>
+                          <small class="total-compra text-white" id="total-compra" hidden></small>
+                        </h2>
+                        <h6 class="text-white">TOTAL DEVOLVER</h6>
+                      <div id="volver">
+                        <h3 class="text-white" id="devolver">$0</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="position-relative mt-n5" style="height: 50px;">
+                    <div class="position-absolute w-100">
+                      <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                          <path id="card-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                        </defs>
+                        <g class="moving-waves">
+                          <use xlink:href="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30"></use>
+                          <use xlink:href="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                          <use xlink:href="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                          <use xlink:href="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                          <use xlink:href="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                          <use xlink:href="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)"></use>
+                        </g>
+                      </svg>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Documento</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Tipo Pago</label>
+                          <select
+                            class="form-control"
+                          >
+                            <option value="EFECTIVO">EFECTIVO</option>
+                            <option value="NEQUI">NEQUI</option>
+                            <option value="BANCOLOMB">BANCOLOMBIA</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-6">
+                          <label>Sede</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label>No Venta</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1">
+                            <label>
+                              Devolución
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="checkrecibocaja"
+                              id="checkrecibocaja"
+                            >
+                              <label>Recibo de Caja?</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fecha</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-10">
+                    <label>Codigo de Barras</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-2">
+                    <label>%</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-4">
+                    <label>Codigo EAN 8</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-4">
+                    <label>Codigo EAN 12</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-4">
+                    <label>Usuario Vendedor</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <label>Nombre del producto</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-3">
+                    <label>Precio</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-2">
+                    <label>Cantidad</label>
+                    <input type="number" class="form-control">
+                  </div>
+                  <div class="col-md-1 mt-4">
+                    <button class="btn btn-danger btn-sm mt-2"> <i class="fas fa-search"></i> </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table table-striped table-hover">
+                      <thead style="background-color: black !important;">
+                        <th class="text-uppercase text-white text-xs font-weight-bolder opacity-12"></th>
+                        <th class="text-uppercase text-white text-xs font-weight-bolder opacity-12">PRODUCTO</th>
+                        <th class="text-uppercase text-white text-xs font-weight-bolder opacity-12">CODIGO</th>
+                        <th class="text-uppercase text-white text-xs font-weight-bolder opacity-12">CANTIDAD</th>
+                        <th class="text-uppercase text-white text-xs font-weight-bolder opacity-12">PRECIO</th>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </main>
+
+
