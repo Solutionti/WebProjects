@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ColposcopiaComponent } from './colposcopia/colposcopia.component';
+import { EcografiaMamaComponent } from './ecografia-mama/ecografia-mama.component';
 
 
 
 @NgModule({
   declarations: [
-    ColposcopiaComponent
+    EcografiaMamaComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class ProcedimientosModule { }
+export class EcografiasModule { }
