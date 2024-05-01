@@ -7,7 +7,7 @@ import { AdmisionesModule } from './admisiones/admisiones.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
