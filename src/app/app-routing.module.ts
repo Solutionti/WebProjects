@@ -5,6 +5,7 @@ import { IniciarsesionComponent } from './seguridad/iniciarsesion/iniciarsesion.
 import { PacientesComponent } from './admisiones/pacientes/pacientes.component';
 import { TriageComponent } from './admisiones/triage/triage.component';
 import { AdmisionComponent } from './admisiones/admision/admision.component';
+import { LaboratorioComponent } from './admisiones/laboratorio/laboratorio.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'admision',
     component: AdmisionComponent,
+  },
+  {
+    path: 'laboratorio',
+    component: LaboratorioComponent,
   },
   {
     path: 'colposcopia',
