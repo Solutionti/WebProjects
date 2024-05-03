@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { AdmisionesModule } from './admisiones/admisiones.module';
+import { EcografiasModule } from './ecografias/ecografias.module';
+import { ComponentesModule } from './componentes/componentes.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +15,9 @@ import { AdmisionesModule } from './admisiones/admisiones.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AdmisionesModule
+    AdmisionesModule,
+    EcografiasModule,
+    ComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

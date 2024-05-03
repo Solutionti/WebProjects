@@ -6,6 +6,7 @@ import { PacientesComponent } from './admisiones/pacientes/pacientes.component';
 import { TriageComponent } from './admisiones/triage/triage.component';
 import { AdmisionComponent } from './admisiones/admision/admision.component';
 import { LaboratorioComponent } from './admisiones/laboratorio/laboratorio.component';
+import { EcografiaComponent } from './ecografias/ecografia/ecografia.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'colposcopia',
     component: ColposcopiaComponent,
+  },
+  {
+    path: 'ecografias',
+    component: EcografiaComponent,
   },
 
 ];
