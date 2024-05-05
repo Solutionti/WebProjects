@@ -11,6 +11,10 @@ import { KardexComponent } from './inventarios/kardex/kardex.component';
 import { InventarioComponent } from './inventarios/inventario/inventario.component';
 import { UsuariosComponent } from './seguridad/usuarios/usuarios.component';
 import { HistorialpacienteComponent } from './procedimientos/historialpaciente/historialpaciente.component';
+import { PagosComponent } from './contabilidad/pagos/pagos.component';
+import { GastosComponent } from './contabilidad/gastos/gastos.component';
+import { FinanzasComponent } from './contabilidad/finanzas/finanzas.component';
+import { ReporteComponent } from './reportes/reporte/reporte.component';
 
 const routes: Routes = [
   {
@@ -56,6 +60,23 @@ const routes: Routes = [
   {
     path: 'hc',
     component: HistorialpacienteComponent,
+  },
+
+  {
+    path: 'pagos',
+    component: PagosComponent,
+  },
+  {
+    path: 'gastos',
+    component: GastosComponent,
+  },
+  {
+    path: 'finanzas',
+    component: FinanzasComponent,
+  },
+  {
+    path: 'reportes',
+    component: ReporteComponent,
   },
 
 ];

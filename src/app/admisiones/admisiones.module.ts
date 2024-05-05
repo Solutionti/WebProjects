@@ -9,7 +9,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ComponentesModule } from '../componentes/componentes.module';
 import { AppRoutingModule } from '../app-routing.module';
 
-
 @NgModule({
   declarations: [
     PacientesComponent,
@@ -22,7 +21,7 @@ import { AppRoutingModule } from '../app-routing.module';
     ReactiveFormsModule,
     BrowserModule,
     ComponentesModule,
-    AppRoutingModule 
+    AppRoutingModule,
   ]
 })
 export class AdmisionesModule { }
