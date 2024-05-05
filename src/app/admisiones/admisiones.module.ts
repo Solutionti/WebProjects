@@ -6,6 +6,7 @@ import { TriageComponent } from './triage/triage.component';
 import { LaboratorioComponent } from './laboratorio/laboratorio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ComponentesModule } from '../componentes/componentes.module';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { BrowserModule } from '@angular/platform-browser';
     CommonModule,
     ReactiveFormsModule,
     BrowserModule,
-    
+    ComponentesModule
   ]
 })
 export class AdmisionesModule { }

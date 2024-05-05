@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdmisionesModule } from './admisiones/admisiones.module';
 import { EcografiasModule } from './ecografias/ecografias.module';
 import { ComponentesModule } from './componentes/componentes.module';
+import { ProcedimientosModule } from './procedimientos/procedimientos.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ComponentesModule } from './componentes/componentes.module';
     AppRoutingModule,
     AdmisionesModule,
     EcografiasModule,
-    ComponentesModule
+    ComponentesModule,
+    ProcedimientosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColposcopiaComponent } from './colposcopia/colposcopia.component';
+import { ComponentesModule } from '../componentes/componentes.module';
 
 
 
@@ -9,7 +10,8 @@ import { ColposcopiaComponent } from './colposcopia/colposcopia.component';
     ColposcopiaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentesModule
   ]
 })
 export class ProcedimientosModule { }
