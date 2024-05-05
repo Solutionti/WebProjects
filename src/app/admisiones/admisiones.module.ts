@@ -7,6 +7,7 @@ import { LaboratorioComponent } from './laboratorio/laboratorio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentesModule } from '../componentes/componentes.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ComponentesModule } from '../componentes/componentes.module';
     CommonModule,
     ReactiveFormsModule,
     BrowserModule,
-    ComponentesModule
+    ComponentesModule,
+    AppRoutingModule 
   ]
 })
 export class AdmisionesModule { }

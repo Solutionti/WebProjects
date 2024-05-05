@@ -7,6 +7,10 @@ import { TriageComponent } from './admisiones/triage/triage.component';
 import { AdmisionComponent } from './admisiones/admision/admision.component';
 import { LaboratorioComponent } from './admisiones/laboratorio/laboratorio.component';
 import { EcografiaComponent } from './ecografias/ecografia/ecografia.component';
+import { KardexComponent } from './inventarios/kardex/kardex.component';
+import { InventarioComponent } from './inventarios/inventario/inventario.component';
+import { UsuariosComponent } from './seguridad/usuarios/usuarios.component';
+import { HistorialpacienteComponent } from './procedimientos/historialpaciente/historialpaciente.component';
 
 const routes: Routes = [
   {
@@ -36,6 +40,22 @@ const routes: Routes = [
   {
     path: 'ecografias',
     component: EcografiaComponent,
+  },
+  {
+    path: 'inventario',
+    component: InventarioComponent,
+  },
+  {
+    path: 'kardex',
+    component: KardexComponent,
+  },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent,
+  },
+  {
+    path: 'hc',
+    component: HistorialpacienteComponent,
   },
 
 ];

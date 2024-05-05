@@ -7,6 +7,8 @@ import { AdmisionesModule } from './admisiones/admisiones.module';
 import { EcografiasModule } from './ecografias/ecografias.module';
 import { ComponentesModule } from './componentes/componentes.module';
 import { ProcedimientosModule } from './procedimientos/procedimientos.module';
+import { InventariosModule } from './inventarios/inventarios.module';
+import { SeguridadModule } from './seguridad/seguridad.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ProcedimientosModule } from './procedimientos/procedimientos.module';
     AdmisionesModule,
     EcografiasModule,
     ComponentesModule,
-    ProcedimientosModule
+    ProcedimientosModule,
+    InventariosModule,
+    SeguridadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
