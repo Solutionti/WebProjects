@@ -15,6 +15,7 @@ import { PagosComponent } from './contabilidad/pagos/pagos.component';
 import { GastosComponent } from './contabilidad/gastos/gastos.component';
 import { FinanzasComponent } from './contabilidad/finanzas/finanzas.component';
 import { ReporteComponent } from './reportes/reporte/reporte.component';
+import { ProductosComponent } from './inventarios/productos/productos.component';
 
 const routes: Routes = [
   {
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path: 'reportes',
     component: ReporteComponent,
+  },
+  {
+    path: 'productos',
+    component: ProductosComponent,
   },
 
 ];
