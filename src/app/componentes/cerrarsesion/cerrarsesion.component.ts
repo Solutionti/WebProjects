@@ -5,8 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './cerrarsesion.component.html'
 })
 export class CerrarsesionComponent implements OnInit {
-  
+
   @Input() titulo: string="";
+
   constructor() { }
 
   ngOnInit(): void {

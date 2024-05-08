@@ -17,6 +17,7 @@ import { FinanzasComponent } from './contabilidad/finanzas/finanzas.component';
 import { ReporteComponent } from './reportes/reporte/reporte.component';
 import { LoaderComponent } from './componentes/loader/loader.component';
 import { InicioComponent } from './seguridad/inicio/inicio.component';
+import { ProductosComponent } from './inventarios/productos/productos.component';
 
 const routes: Routes = [
   {
@@ -88,6 +89,11 @@ const routes: Routes = [
     path: 'inicio',
     component: InicioComponent,
   },
+  {
+    path: 'productos',
+    component: ProductosComponent,
+  },
+
 ];
 
 @NgModule({
