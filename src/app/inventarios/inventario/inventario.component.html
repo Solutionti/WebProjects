@@ -6,7 +6,7 @@
 
 <div class="min-height-300 bg-default position-absolute w-100"></div>
 <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
-  <app-menu></app-menu> 
+  <app-menu></app-menu>
 </aside>
 
 <main class="main-content position-relative border-radius-lg">
@@ -34,18 +34,23 @@
               </table>
             </div>
             <div class="col-md-5">
+              <form [formGroup]="inventarioForm">
               <div class="row">
                 <div class="col-md-5">
                   <label>Empresa</label>
                   <input
                     type="text"
                     class="form-control form-control-sm"
+                    formControlName="empresa_inventario"
+                    [(ngModel)]="empresa_inventario"
                   >
                 </div>
                 <div class="col-md-5">
                   <label>Por Stock</label>
                   <select
                     class="form-control form-control-sm"
+                    formControlName="stock_inventario"
+                    [(ngModel)]="stock_inventario"
                   >
                     <option value="">Seleccione una opcion</option>
                   </select>
@@ -55,6 +60,8 @@
                   <input
                       type="text"
                       class="form-control form-control-sm"
+                      formControlName="cant_inventario"
+                      [(ngModel)]="cant_inventario"
                   >
                   </div>
               </div>
@@ -64,6 +71,8 @@
                     <input
                       type="text"
                       class="form-control form-control-sm"
+                      formControlName="codigo_inventario"
+                      [(ngModel)]="codigo_inventario"
                     >
                   </div>
                 <div class="col-md-4">
@@ -71,6 +80,8 @@
                   <input
                      type="date"
                     class="form-control form-control-sm"
+                    formControlName="inicial_inventario"
+                    [(ngModel)]="inicial_inventario"
                   >
                 </div>
                 <div class="col-md-4">
@@ -78,6 +89,8 @@
                     <input
                        type="date"
                       class="form-control form-control-sm"
+                      formControlName="final_inventario"
+                      [(ngModel)]="final_inventario"
                     >
                   </div>
               </div>
@@ -88,6 +101,7 @@
                 </div>
               </div>
               <br>
+            </form>
             </div>
           </div>
         </div>

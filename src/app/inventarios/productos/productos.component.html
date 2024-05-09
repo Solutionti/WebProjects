@@ -35,32 +35,59 @@
             <div class="col-md-5">
               <div class="row mt-3">
                 <div class="col-md-12" >
-                  <h5 class="text-white bg-default">AGREGAR PRODUCTO</h5>
+                  <h5 class="text-dark  ml-2">AGREGAR PRODUCTO</h5>
+                </div>
               </div>
+              <form [formGroup]="productosForm">
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Categoria</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="categoria_productos"
+                    [(ngModel)]="categoria_productos"
+                  >
                 </div>
                 <div class="col-md-6">
                   <label>Nombre</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="nombre_productos"
+                    [(ngModel)]="nombre_productos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Codigo</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="codigo_productos"
+                    [(ngModel)]="codigo_productos"
+                  >
                 </div>
                 <div class="col-md-6">
                   <label>Codigo de Barras</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="barras_prouctos"
+                    [(ngModel)]="barras_prouctos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Unidad Medida</label>
-                  <select class="form-select" aria-label="Default select example">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    formControlName="medida_productos"
+                    [(ngModel)]="medida_productos"
+                  >
                     <option selected>Caja</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -69,17 +96,32 @@
                 </div>
                 <div class="col-md-6">
                   <label>Cantidad</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="cantidad_productos"
+                    [(ngModel)]="cantidad_productos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Precio por Unidad</label>
-                  <input type="text" class="form-control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="precio_productos"
+                    [(ngModel)]="precio_productos"
+                  >
                 </div>
                 <div class="col-md-6">
                   <label>Moneda</label>
-                  <select class="form-select" aria-label="Default select example">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    formControlName="moneda_productos"
+                    [(ngModel)]="moneda_productos"
+                  >
                     <option selected>Soles (/s)</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -91,7 +133,14 @@
                 <div class="col-md-12">
                   <label>Descripcion</label>
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style="height: 100px"
+                      formControlName="descripcion_productos"
+                      [(ngModel)]="descripcion_productos"
+                    ></textarea>
                     <label for="floatingTextarea2"></label>
                   </div>
                 </div>
@@ -101,7 +150,7 @@
                   <button type="button" class="btn btn-primary">Guardar</button>
                 </div>
               </div>
-
+            </form>
             </div>
           </div>
         </div>

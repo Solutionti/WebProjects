@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-inventario',
@@ -10,5 +11,22 @@ export class InventarioComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  inventarioForm = new FormGroup({
+
+    empresa_inventario: new FormControl(''),
+    stock_inventario: new FormControl(''),
+    cant_inventario: new FormControl(''),
+    codigo_inventario: new FormControl(''),
+    inicial_inventario: new FormControl(''),
+    final_inventario: new FormControl(''),
+  })
+
+  empresa_inventario = "";
+  stock_inventario = "";
+  cant_inventario = "";
+  codigo_inventario = "";
+  inicial_inventario = "";
+  final_inventario = "";
 
 }

@@ -4,6 +4,7 @@ import { KardexComponent } from './kardex/kardex.component';
 import { ComponentesModule } from '../componentes/componentes.module';
 import { InventarioComponent } from './inventario/inventario.component';
 import { ProductosComponent } from './productos/productos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { ProductosComponent } from './productos/productos.component';
   ],
   imports: [
     CommonModule,
-    ComponentesModule
+    ComponentesModule,
+    ReactiveFormsModule
   ]
 })
 export class InventariosModule { }
