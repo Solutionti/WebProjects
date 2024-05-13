@@ -22,11 +22,4 @@ export class InventarioComponent implements OnInit {
     final_inventario: new FormControl(''),
   })
 
-  empresa_inventario = "";
-  stock_inventario = "";
-  cant_inventario = "";
-  codigo_inventario = "";
-  inicial_inventario = "";
-  final_inventario = "";
-
 }

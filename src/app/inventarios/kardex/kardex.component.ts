@@ -19,8 +19,4 @@ export class KardexComponent implements OnInit {
 
   });
 
-  producto_kardex = "";
-  inicial_kardex = "";
-  final_kardex = "";
-
 }

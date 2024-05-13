@@ -30,27 +30,47 @@ export class ProductosComponent implements OnInit {
 
 
   });
-  categoria_productos = "";
-  nombre_productos = "";
-  codigo_productos = "";
-  barras_prouctos = "";
-  medida_productos = "";
-  cantidad_productos = "";
-  precio_productos = "";
-  moneda_productos = "";
-  descripcion_productos = "";
-
-
 
   hiddenBtn = true;
 
 
-
-
-  mostrarVentana(): void {
-  this.hiddenBtn = true;
-   alert("hola mundo");
+  verArray(): void { //crear una funcion
+    console.log(this.producto);
   }
+
+  producto: any[] = [ //crear un array de objetos
+    {
+      codigo: 'televisor',
+      nombre: 'grande',
+      categoria: '123456789',
+      historial: '58',
+      valor: 'sexual',
+      cantidad: 'historial',
+      stock: '3',
+    },
+
+    {
+      codigo: 'ct1200',
+      nombre:'lg',
+      categoria: 'negro',
+      historial: '101',
+      valor: 'infantil',
+      cantidad: 'manual',
+      stock: '2',
+    },
+
+    {
+      codigo: '1tb',
+      nombre: 'led',
+      categoria: '4K',
+      historial: '133',
+      valor: 'adultos',
+      cantidad: 'automatico',
+      stock: '1',
+    }
+  ];
+
+
 
 
 }
