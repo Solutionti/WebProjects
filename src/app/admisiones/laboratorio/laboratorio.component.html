@@ -74,29 +74,31 @@
               </table>
             </div>
             <div class="col-md-5">
+              <form [formGroup]="laboratorioForm">
               <div class="row">
                 <div class="col-md-5">
                   <label>DNI</label>
+                  <input
+                    type="number"
+                    class="form-control form-control-sm"
+                  >
+                </div>
+                <div class="col-md-7">
+                  <label>Nombre Paciente</label>
                   <input
                     type="text"
                     class="form-control form-control-sm"
                   >
                 </div>
-                <div class="col-md-7">
-                    <label>Nombre Paciente</label>
-                    <input
-                      type="text"
-                      class="form-control form-control-sm"
-                    >
-                  </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-8">
                   <label>Doctor</label>
-                  <input
-                    type="text"
+                  <select
                     class="form-control form-control-sm"
                   >
+                    <option value="">Seleccione una opcion</option>
+                  </select>
                 </div>
                 <div class="col-md-4">
                   <label>Fecha</label>
@@ -143,6 +145,7 @@
                 </div>
               </div>
               <br>
+            </form>
             </div>
             <div class="row">
                 <div class="col-md-7">
