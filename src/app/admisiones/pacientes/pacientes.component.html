@@ -2,7 +2,6 @@
 <!-- * * * * * * * * * * * JERSON GALVEZ ENSUNCHO * * * * * * * * * * * -->
 <!-- ******* * * * * * * * PROYECTO CLINICSOFT * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-
 <div class="min-height-300 bg-default position-absolute w-100"></div>
 <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-1 border-radius-xl my-3 fixed-start ms-4 " style="z-index: 1 !important;" id="sidenav-main">
  <app-menu></app-menu>
@@ -69,10 +68,10 @@
           </div>
           <form [formGroup]="crearPacienteForm">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
               <label>DNI</label>
               <input
-                type="text"
+                type="number"
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_dni"
               >
@@ -93,10 +92,10 @@
                 formControlName="crearpaciente_nombre"
               >
             </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
               <label>HC</label>
               <input
-                type="text"
+                type="number"
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_hc"
               >
@@ -106,21 +105,24 @@
             <div class="col-md-3">
               <label>Celular</label>
               <input
-                type="text"
+                type="number"
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_celular"
               >
             </div>
             <div class="col-md-2">
               <label>Sexo</label>
-              <input
-                type="text"
+              <select
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_sexo"
               >
+                <option value="">Seleccione una opcion</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+              </select>
             </div>
             <div class="col-md-2">
-              <label>Fecha de nacimiento</label>
+              <label>Fecha de Nacimiento</label>
               <input
                 type="date"
                 class="form-control form-control-sm"
@@ -130,7 +132,7 @@
             <div class="col-md-1">
               <label>Edad</label>
               <input
-                type="text"
+                type="number"
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_edad"
               >
@@ -212,6 +214,7 @@
                   role="switch"
                   id="flexSwitchCheckChecked"
                   formControlName="crearpaciente_esmenor"
+                  (change)="esmenorEdad()"
                 >
                 <label class="form-check-label" for="flexSwitchCheckChecked">Si</label>
               </div>
@@ -258,5 +261,6 @@
       </div>
     </div>
   </div>
+  
 
 

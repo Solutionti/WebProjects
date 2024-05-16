@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentesModule } from '../componentes/componentes.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from '../app-routing.module';
     BrowserModule,
     ComponentesModule,
     AppRoutingModule,
+    RouterModule
   ]
 })
 export class AdmisionesModule { }

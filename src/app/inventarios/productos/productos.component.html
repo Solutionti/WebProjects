@@ -15,113 +15,80 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-7">
-              <table class="table table-striped table-hover mt-3">
-                <thead>
-                  <tr class="bg-default">
-                    <th class="text-xs text-white">COD</th>
-                    <th class="text-xs text-white">NOMBRE</th>
-                    <th class="text-xs text-white">CATEGORIA</th>
-                    <th class="text-xs text-white">HISTORIAL</th>
-                    <th class="text-xs text-white">VALOR</th>
-                    <th class="text-xs text-white">CANT</th>
-                    <th class="text-xs text-white">STOCK</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let productos of producto">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover mt-3">
+                  <thead>
+                    <tr class="bg-default">
+                      <th class="text-xs text-white"></th>
+                      <th class="text-xs text-white">COD</th>
+                      <th class="text-xs text-white">NOMBRE</th>
+                      <th class="text-xs text-white">CATEGORIA</th>
+                      <th class="text-xs text-white">HISTORIAL</th>
+                      <th class="text-xs text-white">VALOR</th>
+                      <th class="text-xs text-white">CANT</th>
+                      <th class="text-xs text-white">STOCK</th>
+                    </tr>
+                  </thead>
+                  <tbody>
 
-                    <td> {{ productos.codigo }} </td>
-                    <td> {{ productos.nombre }} </td>
-                    <td> {{ productos.categoria }} </td>
-                    <td> {{ productos.historial }} </td>
-                    <td> {{ productos.valor }} </td>
-                    <td> {{ productos.cantidad }} </td>
-                    <td> {{ productos.stock }} </td>
-
-
-                  </tr>
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="col-md-5">
               <div class="row mt-3">
                 <div class="col-md-12" >
-                  <h5 class="text-dark  ml-2">AGREGAR PRODUCTO</h5>
-                </div>
+                  <h6>AGREGAR PRODUCTO</h6>
               </div>
               <form [formGroup]="productosForm">
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Categoria</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="categoria_productos"
-                  >
+                  <select class="form-control form-control-sm">
+                    <option selected>Caja</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
                   <label>Nombre</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="nombre_productos"
-                  >
+                  <input type="text" class="form-control form-control-sm">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Codigo</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="codigo_productos"
-                  >
+                  <input type="text" class="form-control form-control-sm">
                 </div>
                 <div class="col-md-6">
                   <label>Codigo de Barras</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="barras_prouctos"
-                  >
+                  <input type="text" class="form-control form-control-sm">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Unidad Medida</label>
-                  <selectx
-                    class="form-select"
-                    aria-label="Default select example"
-                    formControlName="medida_productos"
-                  >
-                    <option selected *ngFor="let productos of producto" [value]="productos.codigo">  {{productos.nombre}} </option>
-                  </selectx>
+                  <select class="form-control form-control-sm" aria-label="Default select example">
+                    <option selected>Caja</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
                   <label>Cantidad</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="cantidad_productos"
-                  >
+                  <input type="text" class="form-control form-control-sm">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Precio por Unidad</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="precio_productos"
-                  >
+                  <input type="text" class="form-control form-control-sm">
                 </div>
                 <div class="col-md-6">
                   <label>Moneda</label>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    formControlName="moneda_productos"
-                  >
+                  <select class="form-control form-control-sm" aria-label="Default select example">
                     <option selected>Soles (/s)</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -131,14 +98,12 @@
               </div>
               <div class="row mt-1">
                 <div class="col-md-12">
-                  <label>Descripcion</label>
+                  <label>Descripción</label>
                   <div class="form-floating">
                     <textarea
                       class="form-control"
                       placeholder="Leave a comment here"
                       id="floatingTextarea2"
-                      style="height: 100px"
-                      formControlName="descripcion_productos"
                     ></textarea>
                     <label for="floatingTextarea2"></label>
                   </div>
@@ -146,7 +111,7 @@
               </div>
               <div class="row mt-3">
                 <div class="col-md-12">
-                  <button type="button" (click)="verArray()" class="btn btn-primary">Guardar</button>
+                  <button type="button" class="btn btn-primary btn-sm">Guardar</button>
                 </div>
               </div>
             </form>

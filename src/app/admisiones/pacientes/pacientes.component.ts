@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-pacientes',
   templateUrl: './pacientes.component.html',
+  
 })
 export class PacientesComponent implements OnInit {
 
@@ -10,6 +12,7 @@ export class PacientesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+   
   }
 
   containerResponsable = true;
@@ -39,6 +42,16 @@ export class PacientesComponent implements OnInit {
     crearpaciente_telefonores: new FormControl(''),
     crearpaciente_parentescores: new FormControl('')
   });
+
+  esmenorEdad(){
+    let container: any  = this.crearPacienteForm.get("crearpaciente_esmenor")?.value;
+    if(container == true) {
+      this.containerResponsable = false;
+    }
+    else {
+      this.containerResponsable = true;
+    }
+  }
 
   
 }
