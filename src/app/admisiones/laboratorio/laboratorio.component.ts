@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-laboratorio',
@@ -13,7 +13,14 @@ export class LaboratorioComponent implements OnInit {
   }
 
   laboratorioForm = new FormGroup({
-
+    dni_laboratorio: new FormControl(''),
+    nombre_laboratorio: new FormControl(''),
+    doctor_laboratorio: new FormControl(''),
+    fecha_laboratorio: new FormControl(''),
+    Efectivo_laboratorio: new FormControl(''),
+    tarjeta_laboratorio: new FormControl(''),
+    observacion_laboratorio: new FormControl(''),
+    total_laboratorio: new FormControl(''),
   });
 
 }

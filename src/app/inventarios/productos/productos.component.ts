@@ -24,7 +24,7 @@ export class ProductosComponent implements OnInit {
     categoria_productos: new FormControl(''),
     nombre_productos: new FormControl(''),
     codigo_productos: new FormControl(''),
-    barras_prouctos: new FormControl(''),
+    barras_productos: new FormControl(''),
     medida_productos: new FormControl(''),
     cantidad_productos: new FormControl(''),
     precio_productos: new FormControl(''),
