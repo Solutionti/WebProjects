@@ -17,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ComponentesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
 })
 export class InventariosModule { }

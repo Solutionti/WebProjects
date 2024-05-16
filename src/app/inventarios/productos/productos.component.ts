@@ -1,6 +1,7 @@
 import { FormControl, FormGroup } from '@angular/forms';
 import { ComponentesModule } from './../../componentes/componentes.module';
 import { Component, OnInit } from '@angular/core';
+import { InventariosService } from '../services/inventarios.service';
 
 @Component({
   selector: 'app-productos',
@@ -9,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class ProductosComponent implements OnInit {
 
-  constructor() { } //console
+  constructor(
+    private inventarios: InventariosService
+  ) { } //console
 
   ngOnInit(): void {
     // visual docuemnto, dom
+    this.verUsurios();
   }
 
   productosForm = new FormGroup ({
@@ -32,45 +36,27 @@ export class ProductosComponent implements OnInit {
   });
 
   hiddenBtn = true;
-
-
+  
   verArray(): void { //crear una funcion
     console.log(this.producto);
   }
 
-  producto: any[] = [ //crear un array de objetos
-    {
-      codigo: 'televisor',
-      nombre: 'grande',
-      categoria: '123456789',
-      historial: '58',
-      valor: 'sexual',
-      cantidad: 'historial',
-      stock: '3',
-    },
+  producto: any[] = [];
 
-    {
-      codigo: 'ct1200',
-      nombre:'lg',
-      categoria: 'negro',
-      historial: '101',
-      valor: 'infantil',
-      cantidad: 'manual',
-      stock: '2',
-    },
+  // COMO HACER UNA PETICION  A UNA BASE DE DATOS API PHP CON AXIOS  
+  // https://axios-http.com/,
+  // https://axios-http.com/
 
-    {
-      codigo: '1tb',
-      nombre: 'led',
-      categoria: '4K',
-      historial: '133',
-      valor: 'adultos',
-      cantidad: 'automatico',
-      stock: '1',
-    }
-  ];
-
-
+  verUsurios() {
+    this.inventarios
+        .verUsuario()
+        .then((response) =>{
+          this.producto = response.data;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+  }
 
 
 }

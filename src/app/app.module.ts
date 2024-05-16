@@ -11,6 +11,7 @@ import { SeguridadModule } from './seguridad/seguridad.module';
 import { ContabilidadModule } from './contabilidad/contabilidad.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SeguridadModule,
     ContabilidadModule,
     BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
