@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EcografiaComponent } from './ecografia/ecografia.component';
 import { ComponentesModule } from '../componentes/componentes.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { ComponentesModule } from '../componentes/componentes.module';
     ],
     imports: [
         CommonModule,
-        ComponentesModule
+        ComponentesModule,
+        ReactiveFormsModule
     ]
 })
 export class EcografiasModule { }

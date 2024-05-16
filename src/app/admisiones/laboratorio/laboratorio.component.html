@@ -81,6 +81,7 @@
                   <input
                     type="number"
                     class="form-control form-control-sm"
+                    formControlName="dni_laboratorio"
                   >
                 </div>
                 <div class="col-md-7">
@@ -88,6 +89,7 @@
                   <input
                     type="text"
                     class="form-control form-control-sm"
+                    formControlName="nombre_laboratorio"
                   >
                 </div>
               </div>
@@ -96,6 +98,7 @@
                   <label>Doctor</label>
                   <select
                     class="form-control form-control-sm"
+                    formControlName="doctor_laboratorio"
                   >
                     <option value="">Seleccione una opcion</option>
                   </select>
@@ -105,19 +108,35 @@
                   <input
                      type="date"
                     class="form-control form-control-sm"
+                    formControlName="fecha_laboratorio"
                   >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="exampleRadios"
+                          id="exampleRadios1"
+                          value="option1"
+                          checked
+                          formControlName="Efectivo_laboratorio"
+                        >
                         <label class="form-check-label" for="exampleRadios1">
                           Efectivo
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="exampleRadios"
+                          id="exampleRadios2"
+                          value="option2"
+                          formControlName="tarjeta_laboratorio"
+                        >
                         <label class="form-check-label" for="exampleRadios2">
                           Tarjeta
                         </label>
@@ -129,6 +148,7 @@
                   <label>Observación</label>
                   <textarea
                     class="form-control form-control-sm"
+                    formControlName="observacion_laboratorio"
                   ></textarea>
                 </div>
               </div>
@@ -141,6 +161,7 @@
                   <input
                      type="text"
                     class="form-control form-control-sm"
+                    formControlName="total_laboratorio"
                   >
                 </div>
               </div>
@@ -160,7 +181,7 @@
                            </tr>
                         </thead>
                         <tbody>
-        
+
                         </tbody>
                       </table>
                 </div>

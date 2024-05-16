@@ -44,7 +44,10 @@
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Categoria</label>
-                  <select class="form-control form-control-sm">
+                  <select
+                    class="form-control form-control-sm"
+                    formControlName="categoria_productos"
+                  >
                     <option selected>Caja</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -53,23 +56,39 @@
                 </div>
                 <div class="col-md-6">
                   <label>Nombre</label>
-                  <input type="text" class="form-control form-control-sm">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    formControlName="nombre_productos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Codigo</label>
-                  <input type="text" class="form-control form-control-sm">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    formControlName="codigo_productos"
+                  >
                 </div>
                 <div class="col-md-6">
                   <label>Codigo de Barras</label>
-                  <input type="text" class="form-control form-control-sm">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    formControlName="barras_productos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Unidad Medida</label>
-                  <select class="form-control form-control-sm" aria-label="Default select example">
+                  <select
+                    class="form-control form-control-sm"
+                    aria-label="Default select example"
+                    formControlName="medida_productos"
+                  >
                     <option selected>Caja</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -78,17 +97,29 @@
                 </div>
                 <div class="col-md-6">
                   <label>Cantidad</label>
-                  <input type="text" class="form-control form-control-sm">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    formControlName="cantidad_productos"
+                  >
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-6">
                   <label>Precio por Unidad</label>
-                  <input type="text" class="form-control form-control-sm">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    formControlName="precio_productos"
+                  >
                 </div>
                 <div class="col-md-6">
                   <label>Moneda</label>
-                  <select class="form-control form-control-sm" aria-label="Default select example">
+                  <select
+                    class="form-control form-control-sm"
+                    aria-label="Default select example"
+                    formControlName="moneda_productos"
+                  >
                     <option selected>Soles (/s)</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -104,6 +135,7 @@
                       class="form-control"
                       placeholder="Leave a comment here"
                       id="floatingTextarea2"
+                      formControlName="descripcion_productos"
                     ></textarea>
                     <label for="floatingTextarea2"></label>
                   </div>
