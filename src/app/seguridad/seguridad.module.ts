@@ -4,6 +4,7 @@ import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component'
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ComponentesModule } from '../componentes/componentes.module';
 import { InicioComponent } from './inicio/inicio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { InicioComponent } from './inicio/inicio.component';
   ],
   imports: [
     CommonModule,
-    ComponentesModule
+    ComponentesModule,
+    ReactiveFormsModule
   ]
 })
 export class SeguridadModule { }
