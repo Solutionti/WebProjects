@@ -19,7 +19,6 @@ export class AdmisionComponent implements OnInit {
   );
 
   admisionForm = new FormGroup({
-
     dni_admision: new FormControl(''),
     hc_admision: new FormControl(''),
     si_admision: new FormControl(''),
@@ -27,6 +26,9 @@ export class AdmisionComponent implements OnInit {
     nombre_admision: new FormControl(''),
     especialidad_admision: new FormControl(''),
     doctor_admision: new FormControl(''),
+  });
+
+  admisionForm2 = new FormGroup({
     fecha_admision: new FormControl(''),
     factura_admision: new FormControl(''),
     costo_admision: new FormControl(''),
