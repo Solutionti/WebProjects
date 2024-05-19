@@ -107,6 +107,12 @@
                     formControlName="especialidad_admision"
                   >
                     <option value="">Seleccione una opcion</option>
+                    <option
+                      *ngFor="let especialidad of getSpecialtie"
+                      [value]="especialidad.codigo_especialidad"
+                    >
+                      {{ especialidad.descripcion }}
+                    </option>
                   </select>
                 </div>
                 <div class="col-md-6">
@@ -116,6 +122,12 @@
                     formControlName="doctor_admision"
                   >
                     <option value="">Seleccione una opcion</option>
+                    <option
+                      *ngFor="let doctor of getDoctors"
+                      [value]="doctor.codigo_doctor"
+                    >
+                      {{ doctor.nombre }}
+                    </option>
                 </select>
                 </div>
               </div>

@@ -15,14 +15,9 @@ export class PacientesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSex();
-  }
-
-  getSex() {
-    this.listasaplicacion
-        .getSex()
-        .then((response) => {
-          console.log(response);
-        })
+    this.getDepartaments();
+    this.getAcademics();
+    this.getCivilStatus();
   }
 
   containerResponsable = true;
@@ -52,6 +47,65 @@ export class PacientesComponent implements OnInit {
     crearpaciente_telefonores: new FormControl(''),
     crearpaciente_parentescores: new FormControl('')
   });
+
+
+  getSexs: any[] = [];
+  getSex() {
+    this.listasaplicacion
+        .getSex()
+        .then((response) => {
+          this.getSexs = response.data;
+        })
+  }
+
+  getDepartament: any[] = [];
+  getDepartaments(){
+      this.listasaplicacion
+          .getDepartaments()
+          .then((response) => {
+            this.getDepartament = response.data;
+        })
+  }
+
+  getAcademic: any[] = [];
+  getAcademics(){
+      this.listasaplicacion
+          .getAcademics()
+          .then((response) => {
+            this.getAcademic = response.data;
+      })
+  }
+
+  getCivilStatu: any[] = [];
+  getCivilStatus() {
+      this.listasaplicacion
+          .getCivilStatus()
+          .then((response) => {
+            this.getCivilStatu = response.data
+      })
+
+  }
+
+  getProvinces: any[] = [];
+  getProvince() {
+    let departamento = this.crearPacienteForm.get("crearpaciente_departamento")?.value; //se recupera valor input
+    this.listasaplicacion
+        .getProvince(departamento)
+        .then((response) => {
+          this.getProvinces = response.data
+        })
+  }
+
+  getDistricto: any[] = [];
+  getDistrict(){
+    let provincia = this.crearPacienteForm.get("crearpaciente_departamento")?.value; // se recupera valor input
+    this.listasaplicacion
+        .getDistrict(provincia)
+        .then((response) => {
+          this.getDistricto = response.data
+        })
+  }
+
 
   esmenorEdad(){
     let container: any  = this.crearPacienteForm.get("crearpaciente_esmenor")?.value;

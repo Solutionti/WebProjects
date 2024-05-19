@@ -117,8 +117,13 @@
                 formControlName="crearpaciente_sexo"
               >
                 <option value="">Seleccione una opcion</option>
-                <option value="M">Masculino</option>
-                <option value="F">Femenino</option>
+                <option
+                  *ngFor="let sexo of getSexs"
+                  [value]="sexo.codigo"
+                >
+                  {{ sexo.descripcion }}
+                </option>
+
               </select>
             </div>
             <div class="col-md-2">
@@ -152,8 +157,16 @@
               <select
                 class="form-control form-control-sm text-capitalize"
                 formControlName="crearpaciente_departamento"
+                (change)="getProvince()"
               >
                 <option value="">Seleccione una opcion</option>
+                <option
+                  *ngFor="let departamento of getDepartament"
+                  [value]="departamento.id"
+                  >
+                  {{ departamento.name }}
+
+                </option>
               </select>
             </div>
             <div class="col-md-4">
@@ -161,8 +174,15 @@
               <select
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_provincia"
+                (change)="getDistrict()"
               >
                 <option value="">Seleccione una opcion</option>
+                <option
+                  *ngFor="let provincia of getProvinces"
+                  [value]="provincia.id"
+                >
+                  {{ provincia.name }}
+              </option>
               </select>
             </div>
             <div class="col-md-4">
@@ -172,6 +192,12 @@
                 formControlName="crearpaciente_distrito"
               >
                 <option value="">Seleccione una opcion</option>
+                <option
+                  *ngFor="let distrito of getDistricto"
+                  [value]="distrito.id"
+                >
+                  {{ distrito.name }}
+                </option>
               </select>
             </div>
           </div>
@@ -192,6 +218,13 @@
                 formControlName="crearpaciente_grado"
               >
                 <option value="">Seleccione una opcion</option>
+                <option
+                  *ngFor="let academico of getAcademic"
+                  [value]="academico.codigo"
+                  >
+                  {{ academico.descripcion }}
+
+                </option>
               </select>
             </div>
             <div class="col-md-4">
@@ -201,6 +234,12 @@
                 formControlName="crearpaciente_estacocivil"
               >
                 <option value="">Seleccione una opcion</option>
+                <option
+                  *ngFor="let estado of getCivilStatu"
+                  [value]="estado.codigo"
+                >
+                  {{ estado.descripcion }}
+              </option>
               </select>
             </div>
           </div>
@@ -261,6 +300,6 @@
       </div>
     </div>
   </div>
-  
+
 
 

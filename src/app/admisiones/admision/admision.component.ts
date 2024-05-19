@@ -1,3 +1,4 @@
+import { ListasService } from 'src/app/services/listas.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -9,10 +10,30 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AdmisionComponent implements OnInit {
 
   constructor(
-
+    private listasaplicacion: ListasService
   ) { }
 
   ngOnInit(): void {
+    this.getDoctor();
+    this.getSpecialties();
+  }
+
+  getDoctors: any[] = [];
+  getDoctor(){
+    this.listasaplicacion
+          .getDoctor()
+          .then((response) => {
+            this.getDoctors = response.data;
+          })
+  }
+
+  getSpecialtie: any[] = [];
+  getSpecialties(){
+      this.listasaplicacion
+            .getSpecialties()
+            .then((response) => {
+              this.getSpecialtie = response.data;
+            })
   }
 
   date = new Date();
