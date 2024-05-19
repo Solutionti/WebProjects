@@ -9,6 +9,8 @@ export class ListasService {
 
   constructor() { }
 
-  
+  getSex() {
+    return axios.get(environment.apiClinicSoft + 'getSex');
+  }
 
 }

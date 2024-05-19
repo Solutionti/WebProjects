@@ -1,18 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ListasService } from 'src/app/services/listas.service';
 
 @Component({
   selector: 'app-pacientes',
   templateUrl: './pacientes.component.html',
-  
+
 })
 export class PacientesComponent implements OnInit {
 
   constructor(
+    private listasaplicacion: ListasService
   ) { }
 
   ngOnInit(): void {
-   
+    this.getSex();
+  }
+
+  getSex() {
+    this.listasaplicacion
+        .getSex()
+        .then((response) => {
+          console.log(response);
+        })
   }
 
   containerResponsable = true;
@@ -53,5 +63,5 @@ export class PacientesComponent implements OnInit {
     }
   }
 
-  
+
 }
