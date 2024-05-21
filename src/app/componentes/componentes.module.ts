@@ -20,7 +20,7 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
   ]
 })
 export class ComponentesModule { }

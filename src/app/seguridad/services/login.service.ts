@@ -8,7 +8,6 @@ export class LoginService {
 
   constructor() { }
 
-  // prueba3@hotmail.com
   iniciarSesion(email: any , password: any ) {
     return axios.post(environment.apiClinicSoft + 'login',
       {
@@ -16,10 +15,5 @@ export class LoginService {
         password: password
       }
     );
-  }
-
-  
-  cerrarSesion() {
-
   }
 }

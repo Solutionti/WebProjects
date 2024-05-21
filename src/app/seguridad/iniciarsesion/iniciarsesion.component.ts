@@ -35,6 +35,15 @@ export class IniciarsesionComponent implements OnInit {
           if(response.data.token) {
             sessionStorage.setItem('token', response.data.token);
             localStorage.setItem('token', JSON.stringify(response.data.token));
+
+            let users: any  = [];
+            users[0] = response.data.users.nombre;
+            users[1] = response.data.users.apellido;
+            users[2] = response.data.users.rol_usuario;
+            users[3] = response.data.users.estado;
+            users[4] = response.data.users.usuario;
+            localStorage.setItem("users", JSON.stringify(users));
+
             this.router.navigate(['/', 'inicio']);
           }
         })
@@ -52,5 +61,4 @@ export class IniciarsesionComponent implements OnInit {
       this.router.navigate(['/']);
     }
   }
-
 }
