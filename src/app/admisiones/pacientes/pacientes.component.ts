@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ListasService } from 'src/app/services/listas.service';
+import { AdmisionesService } from '../services/admisiones.service';
 
 @Component({
   selector: 'app-pacientes',
@@ -10,7 +11,8 @@ import { ListasService } from 'src/app/services/listas.service';
 export class PacientesComponent implements OnInit {
 
   constructor(
-    private listasaplicacion: ListasService
+    private listasaplicacion: ListasService,
+    private admisiones: AdmisionesService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +42,7 @@ export class PacientesComponent implements OnInit {
     crearpaciente_distrito: new FormControl(''),
     crearpaciente_ocupacion: new FormControl(''),
     crearpaciente_grado: new FormControl(''),
-    crearpaciente_estacocivil: new FormControl(''),
+    crearpaciente_estadocivil: new FormControl(''),
     crearpaciente_esmenor: new FormControl(''),
     crearpaciente_documentores: new FormControl(''),
     crearpaciente_responsable: new FormControl(''),
@@ -117,5 +119,87 @@ export class PacientesComponent implements OnInit {
     }
   }
 
+  getPatient(): void {
+    let documento = this.crearPacienteForm.get("crearpaciente_dni")?.value;
+    this.admisiones
+        .getPatient(documento)
+        .then((response: any ) => {
+          this.crearPacienteForm.patchValue(
+           {
+            crearpaciente_apellido: response.data.apellido ,
+            crearpaciente_nombre: response.data.nombre,
+            crearpaciente_hc: response.data.hc,
+            crearpaciente_celular: response.data.telefono,
+            crearpaciente_sexo: response.data.sexo,
+            crearpaciente_fechanacimiento: response.data.fecha_nacimiento,
+            crearpaciente_edad: response.data.edad,
+            crearpaciente_direccion: response.data.direccion,
+            crearpaciente_departamento: response.data.departamento,
+            crearpaciente_provincia: response.data.provincia,
+            crearpaciente_distrito: response.data.distrito,
+            crearpaciente_ocupacion: response.data.ocupacion,
+            crearpaciente_grado: response.data.grado_academico,
+            crearpaciente_estadocivil: response.data.estado_civil,
+            crearpaciente_esmenor: response.data.menor_edad,
+            crearpaciente_documentores: response.data.documento,
+            crearpaciente_telefonores: response.data.telefono,
+           }
+          );
+        });
+  }
+
+  crearPaciente(): void {
+    let dni = this.crearPacienteForm.get("crearpaciente_dni")?.value,
+        apellido = this.crearPacienteForm.get("crearpaciente_apellido")?.value,
+        nombre = this.crearPacienteForm.get("crearpaciente_nombre")?.value,
+        hc = this.crearPacienteForm.get("crearpaciente_hc")?.value,
+        celular = this.crearPacienteForm.get("crearpaciente_celular")?.value,
+        sexo = this.crearPacienteForm.get("crearpaciente_sexo")?.value,
+        fechaNacimiento = this.crearPacienteForm.get("crearpaciente_fechanacimiento")?.value,
+        edad = this.crearPacienteForm.get("crearpaciente_edad")?.value,
+        direccion = this.crearPacienteForm.get("crearpaciente_direccion")?.value,
+        departamento = this.crearPacienteForm.get("crearpaciente_departamento")?.value,
+        provincia = this.crearPacienteForm.get("crearpaciente_provincia")?.value,
+        distrito = this.crearPacienteForm.get("crearpaciente_distrito")?.value,
+        ocupacion = this.crearPacienteForm.get("crearpaciente_ocupacion")?.value,
+        grado = this.crearPacienteForm.get("crearpaciente_grado")?.value,
+        estadoCivil = this.crearPacienteForm.get("crearpaciente_estadocivil")?.value,
+        esMenor = this.crearPacienteForm.get("crearpaciente_esmenor")?.value,
+        documentores = this.crearPacienteForm.get("crearpaciente_documentores")?.value,
+        responsable = this.crearPacienteForm.get("crearpaciente_responsable")?.value,
+        telefonores = this.crearPacienteForm.get("crearpaciente_telefonores")?.value,
+        parentescores = this.crearPacienteForm.get("crearpaciente_parentescores")?.value;
+
+    let pacientes: any =  [
+      {
+        "dni": dni,
+        "apellido": apellido,
+        "nombre": nombre,
+        "hc": hc,
+        "celular": celular,
+        "sexo": sexo,
+        "fechaNacimiento": fechaNacimiento,
+        "edad": edad,
+        "direccion": direccion,
+        "departamento": departamento,
+        "provincia": provincia,
+        "distrito": distrito,
+        "ocupacion": ocupacion,
+        "grado": grado,
+        "estadoCivil": estadoCivil,
+        "esMenor": esMenor,
+        "documentores": documentores,
+        "responsable": responsable,
+        "telefonores": telefonores,
+        "parentescores": parentescores,
+      }
+    ];
+
+    this.admisiones
+        .createPatient(pacientes)
+        .then((response: any) => {
+          console.log(response);
+        });
+  }
 
 }

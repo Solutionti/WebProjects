@@ -29,14 +29,15 @@
                 >
                   <i class="fas fa-pen text-white"></i> Actualizar
                 </a>
-                <a
+                <button
                   class="btn btn-primary text-white btn-xs mx-1"
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                   [hidden]="btnAgregarHidden"
+                  (click)="crearPaciente()"
                 >
                   <i class="fas fa-database text-white"></i> Crear
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -74,6 +75,7 @@
                 type="number"
                 class="form-control form-control-sm"
                 formControlName="crearpaciente_dni"
+                (blur)="getPatient()"
               >
             </div>
             <div class="col-md-4">
@@ -231,7 +233,7 @@
               <label>Estado Civil</label>
               <select
                 class="form-control form-control-sm"
-                formControlName="crearpaciente_estacocivil"
+                formControlName="crearpaciente_estadocivil"
               >
                 <option value="">Seleccione una opcion</option>
                 <option
