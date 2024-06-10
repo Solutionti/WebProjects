@@ -24,14 +24,11 @@ const routes: Routes = [
     path: 'inicio',
     component: InicioComponent,  
   },
-
   // INVENTARIOS
-
   {
     path: 'inventarios',
     component: InventarioComponent, 
   },
-
   // VENTAS
   {
     path: 'venta',
@@ -49,7 +46,6 @@ const routes: Routes = [
     path: 'proveedores',
     component: ProveedoresComponent, 
   },
-
   // REPORTES
   {
     path: 'reportes',
