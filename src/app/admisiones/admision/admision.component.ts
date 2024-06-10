@@ -2,7 +2,6 @@ import { ListasService } from 'src/app/services/listas.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-
 @Component({
   selector: 'app-admision',
   templateUrl: './admision.component.html',
