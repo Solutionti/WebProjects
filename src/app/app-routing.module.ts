@@ -13,43 +13,47 @@ import { ReporteComponent } from './reportes/reporte/reporte.component';
 const routes: Routes = [
   {
     path: '',
-    component: IniciarsesionComponent,  
+    component: IniciarsesionComponent,
   },
   // SEGURIDAD
   {
     path: 'usuarios',
-    component: UsuariosComponent,  
+    component: UsuariosComponent,
   },
   {
     path: 'inicio',
-    component: InicioComponent,  
+    component: InicioComponent,
   },
   // INVENTARIOS
   {
     path: 'inventarios',
-    component: InventarioComponent, 
+    component: InventarioComponent,
   },
   // VENTAS
   {
     path: 'venta',
-    component: VentaComponent, 
+    component: VentaComponent,
   },
   {
     path: 'pedidos',
-    component: PedidosComponent, 
+    component: PedidosComponent,
   },
   {
     path: 'compras',
-    component: ComprasComponent, 
+    component: ComprasComponent,
   },
   {
     path: 'proveedores',
-    component: ProveedoresComponent, 
+    component: ProveedoresComponent,
   },
   // REPORTES
   {
     path: 'reportes',
-    component: ReporteComponent, 
+    component: ReporteComponent,
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent,
   },
 ];
 
